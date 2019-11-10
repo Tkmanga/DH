@@ -143,31 +143,132 @@
     /*
      Partiendo de un archivo con la siguiente variable definida:
     */?>
+<!--
     <?php
-    esAmericano = true;
-    $ceu = [
-        "Argentina"=>["Buenos Aires", "Córdoba", "Santa Fé"],
-        "Brasil" => ["Brasilia", "Rio de Janeiro", "Sao Pablo"],
-        "Colombia" => ["Cartagena", "Bogota", "Barranquilla"],
-        "Francia" => ["Paris", "Nantes", "Lyon"],
-        "Italia" => ["Roma", "Milan", "Venecia"],
-        "Alemania" => ["Munich", "Berlin", "Frankfurt"]
+     $ceu = [
+        "Argentina"=>["Buenos Aires", "Córdoba", "Santa Fé","esAmericano"=>true],
+        "Brasil" => ["Brasilia", "Rio de Janeiro", "Sao Pablo","esAmericano"=>true],
+        "Colombia" => ["Cartagena", "Bogota", "Barranquilla","esAmericano"=>true],
+        "Francia" => ["Paris", "Nantes", "Lyon","esAmericano"=>false],
+        "Italia" => ["Roma", "Milan", "Venecia","esAmericano"=>false],
+        "Alemania" => ["Munich", "Berlin", "Frankfurt","esAmericano"=>false]
         ];
-        ?>
-
-      <ul >
+    ?>
+      <ul>
         <?php foreach ($ceu as $key => $value) { ?>
           <li>
-              <?php echo "Las ciudades de ".$key." son:" ?>
-              <ul>
-              <?php foreach ($ceu[$key] as  $value): ?>
-                <li>
-                  <?php echo $value ?>
-                </li>
-              <?php endforeach; ?>
-              </ul>
+              <?php if ($ceu[$key]["esAmericano"]==true) {?>
+                <?php echo "Las ciudades de ".$key." son:" ?>
+                  <ul>
+                    <?php foreach ($ceu[$key] as  $value): ?>
+                      <li>
+                        <?php echo $value ?>
+                      </li>
+                    <?php endforeach; ?>
+                </ul>.
+              <?php }; ?>
           </li>
         <?php }; ?>
       </ul>
+-->
+  <?php
+//   Partiendo del archivo embed.html
+// Inicializar una variable $nombre antes del código HTML y reemplazar [NOMBRE] por el valor de dicha variable
+// Previo al código HTML sortear un número que puede ser 0 o 1. Si el número es 1 se imprimirá luego del texto “¿Es usted un ganador?” el texto “SI”. Por el contrario, si el número es 0, se imprimirá el texto “NO”.
+// Modificar el listado de sitios web para que estos sean tomados de un Array. ¿Cómo podemos hacer para que también se generen bien los hipervínculos?
+// ¿Pudiste escribir todo el código utilizando la sintaxis corta?
+  $arreglo = [
+        0 => [
+                “id” => 1
+                “titulo” => “Lorem Ipsum”,
+                “descripcion” => “Lorem Ipsum”,
+                “precio” => 300,
+                “imagen” => “img-pdto-1.jpg”,
+                “enOferta” => true
+        ],
+
+        1 => [
+                “id” => 2
+                “titulo” => “Lorem Ipsum”,
+                “descripcion” => “Lorem Ipsum”,
+                “precio” => 500,
+                “imagen” => “img-pdto-2.jpg”,
+                “enOferta” => false
+        ],
+
+        2 => [
+                “id” => 3
+                “titulo” => “Lorem Ipsum”,
+                “descripcion” => “Lorem Ipsum”,
+                “precio” => 500,
+                “imagen” => “img-pdto-2.jpg”,
+                “enOferta” => false
+        ],
+
+        3 => [
+                “id” => 4
+                “titulo” => “Lorem Ipsum”,
+                “descripcion” => “Lorem Ipsum”,
+                “precio” => 500,
+                “imagen” => “img-pdto-2.jpg”,
+                “enOferta” => false
+        ],
+
+        4 => [
+                “id” => 5
+                “titulo” => “Lorem Ipsum”,
+                “descripcion” => “Lorem Ipsum”,
+                “precio” => 500,
+                “imagen” => “img-pdto-2.jpg”,
+                “enOferta” => false
+        ],
+
+        5 => [
+                “id” => 6
+                “titulo” => “Lorem Ipsum”,
+                “descripcion” => “Lorem Ipsum”,
+                “precio” => 500,
+                “imagen” => “img-pdto-2.jpg”,
+                “enOferta” => false
+        ],
+
+        6 => [
+                “id” => 7
+                “titulo” => “Lorem Ipsum”,
+                “descripcion” => “Lorem Ipsum”,
+                “precio” => 500,
+                “imagen” => “img-pdto-2.jpg”,
+                “enOferta” => false
+        ],
+
+        7 => [
+                “id” => 8
+                “titulo” => “Lorem Ipsum”,
+                “descripcion” => “Lorem Ipsum”,
+                “precio” => 500,
+                “imagen” => “img-pdto-2.jpg”,
+                “enOferta” => false
+        ],
+
+        8 => [
+                “id” => 9
+                “titulo” => “Lorem Ipsum”,
+                “descripcion” => “Lorem Ipsum”,
+                “precio” => 500,
+                “imagen” => “img-pdto-2.jpg”,
+                “enOferta” => false
+        ],
+
+        9 => [
+                “id” => 10
+                “titulo” => “Lorem Ipsum”,
+                “descripcion” => “Lorem Ipsum”,
+                “precio” => 500,
+                “imagen” => “img-pdto-2.jpg”,
+                “enOferta” => false
+        ]
+];
+
+   ?>
   </body>
 </html>
