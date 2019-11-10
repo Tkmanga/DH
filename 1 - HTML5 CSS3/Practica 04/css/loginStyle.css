@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body{
+  background-image:url(../img/bg-2.png);
+
+  font-family: 'Roboto', sans-serif;
+}
+
+header{
+  width: 1140px;
+  height: 50px;
+  background-color: rgb(239,76,38);
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+header img {
+  float: left;
+  padding-left: 10px;
+  padding-top: 6px;
+}
+
+
+header div {
+  float:left;
+
+}
+
+
+header div ul li {
+  float: left;
+}
+
+
+header div ul li a {
+  margin-left: auto;
+  text-decoration: none;
+  margin: 10px;
+  color: white;
+}
+
+
+#menuDere {
+  float: right;
+}
+form {
+  width: 320px;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+form .full {
+  width: 100%;
+  padding: 5px;
+}
+
+#vola {
+  float: right;
+}
+h1 {
+  text-align: center;
+}
+button {
+  background-color: #3d8dbc;
+  color: white;
+  border-radius: 10px;
+  border: 0px solid #000000;
+  padding: 5px 30px;
+  float: left;
+}
+
+#vola2 {
+  overflow: hidden;
+}

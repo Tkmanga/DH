@@ -1,0 +1,29 @@
+#caja1 {
+  width: 300px;
+  height: 300px;
+  background-color: red;
+}
+#caja2 {
+  /*
+  position relative
+  deja que la caja ocupe su lugar de origen pero se proyecte en otro lado
+  position absolute
+  la caja se posiciona segun los margenes del body
+  position fixed
+  la caja se para donde le decimos y nos acompaña en hacer scroll en la pantalla
+
+  podemos combinar 2 parametros
+  si el contenedor tiene relative y el elemento absolute hace que la caja se posicione desde el contenedor no desde el body
+  */
+  position: relative;
+  bott
+  top: 30px;
+  width: 300px;
+  height: 300px;
+  background-color: green;
+}
+#caja3 {
+  width: 300px;
+  height: 300px;
+  background-color: blue;
+}

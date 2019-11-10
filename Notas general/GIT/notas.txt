@@ -1,0 +1,68 @@
+ls: list visibilidad donde estamos parados quedocumentos tengo en la carpeta donde estoy parado 
+
+ls -a: le agregamos una opcion que nos da los archivos ocultos ademas de los archivos anteriores 
+
+clear: borramos lo que vemos en pantalla para tener mejor vista
+
+ls lh: detalles de los elementos listados 
+
+man: manual de los comandos va antes de cualquier comando que quedramos saber sus comandos disponibles 
+
+cd: change directori 
+
+mkdir: creamos una carpeta llamada x 
+
+rm archivo.txt por ejemplo eliminamos un archivo
+
+rm -r prueba para borrar una carpeta para que sea recursivo 
+
+cp copiar un archivo
+
+atom . abre el programa atom  
+ 
+dir muestra los archivos de la carpeta donde estamos ubicados 
+
+cd .. retrocedemos 
+
+touch archivo.txt crea un archivo 
+
+mv nombre.txt otro.txt cambiamos el nombre del archivo 
+
+cls limipia todo lo que hayamos escrito en consola 
+
+ls -lah vemos los archivos del directorio y sus detalles 
+
+--------------------------------------------------------------------------
+
+haciendo el git desde el cmd
+
+1-creamos el repositorio en github 
+2-vamos al cmd y creamos una carpeta con el nombre reconocible
+3-nos posicionamos sobre la carpeta que creamos 
+4-comando git init (Esto le dice a git que esa carpeta va funcional como un repositorio local)
+5- git remote add origin "URL" la url que nos da github 
+
+clonando el git desde el cmd
+
+1-creamos una carpeta aparte
+2-nos posicionamos sobre la carpeta
+3-git clone "URL" esto clona los archivos del repositorio remoto para trabajar sobre esos 
+
+--------------------------------------------------------------------------
+
+git config user.name "jhon_doe"
+git config user.email "jhon@email.com"
+git remote add origin https://
+
+git add (mas el nombre del archivo que queremos subir)
+git add .  (sube todo los archivos que tuvieron cambios)
+git rm (para quitar archivos del escenario)
+
+git commit (empaqueta los archivos que se van a cambiar)
+git commit -m "mensaje que va con el empaquetado"
+
+git push (sube todos los cambios al repositorio remoto)
+git push origin master (subimos a la rama princial y estable del proyecto )
+
+git status nos indica el estado de la carpeta a sincronizar si esta en rojo los archivos es que no se sincornizo 
+

@@ -1,0 +1,129 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body{
+  background-image:url(../img/bg-2.png);
+  font-family: 'Roboto', sans-serif;
+}
+
+header{
+  width: 1140px;
+  height: 50px;
+  background-color: rgb(239,76,38);
+  overflow: hidden;
+  margin: 0 auto;
+}
+header img {
+  float: left;
+  padding-left: 10px;
+  padding-top: 6px;
+}
+
+header div {
+  float:left;
+
+}
+header div ul li {
+  float: left;
+}
+
+header div ul li a {
+  margin-left: auto;
+  text-decoration: none;
+  margin: 10px;
+  color: white;
+
+}
+
+#menuDere {
+  float: right;
+}
+
+
+article {
+  padding-top: 10px;
+}
+
+#glande > article > img {
+  width: 100%;
+}
+
+#glande article {
+  width: 380px;
+  height: 380px;
+  margin: 10px;
+  text-align: justify;
+  float: left;
+}
+
+#medio {
+    width: 1140px;
+    margin:0 auto;
+    overflow: hidden;
+}
+
+#glande{
+  background-color: white;
+  width: 800px;
+  height: 1250px;
+  margin: 0;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.btn {
+  background-color: #ff4e46;
+  margin: 0px auto;
+  padding: 5px 10px;
+  border: 0px solid #000000;
+  color: white;
+}
+
+#sec2 {
+  width: 320px;
+  height: 1250px;
+  float: right;
+  margin-top: 20px;
+}
+
+#sec2 > div {
+  background-color: white;
+  padding-top: 5px;
+  padding-bottom:: 5px;
+  padding-left: 15px;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.aside {
+  background-color: white;
+  border: 1px solid rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.aside > img {
+  padding-left: 10px;
+}
+
+.aside > p {
+
+}
+
+.ladoA {
+  width: 40%;
+  float: left;
+}
+
+.ladoA img{
+  margin-left: 10px;
+}
+
+
+.ladoB {
+  width: 50%;
+  float: left;
+}
+
+#subAside {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}

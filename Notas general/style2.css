@@ -1,0 +1,22 @@
+input:hover{
+  background: red;
+}
+
+input:focus{
+  background: violet;
+}
+/* numero para paraffo especifico even para campos pares, odd campos pares*/
+p:nth-child(even){
+  background-color: orange;
+}
+
+header,section,footer{
+  width: 40px;
+  height: 40px;
+
+  border: 1px dashed black ;
+  background-color: orange;
+  padding: 10px;
+  margin: 11px;
+  box-sizing: border-box;
+}

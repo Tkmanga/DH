@@ -1,0 +1,33 @@
+body
+{
+  background-color: #1c2230;
+}
+.navbar-nav {
+  margin-left: auto;
+}
+
+.navbar-brand img {
+  width: 100px;
+}
+
+/*
+Seccion intro
+*/
+
+section#intro {
+  margin: 0 auto;
+  max-width: 900px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+/*
+Seccion servicios
+*/
+section#servicios {
+  color: white;
+  text-align: center; 
+}

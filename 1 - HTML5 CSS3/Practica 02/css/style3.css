@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:700&display=swap');
+
+body {
+  background-color: brown;
+  font-family: 'Open Sans', sans-serif;
+  background-color: white;
+}
+section{
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 80%;
+    float: right;
+}
+#a{
+  height: 10vh;
+  width: 80%;
+  background-image: url(../img/emilia-music-top.jpg);
+}
+#a p {
+  float: right;
+  color: black;
+}
+
+
+#b{
+  width: 80%;
+}
+
+#b a{
+  text-decoration: none;
+  color:gray;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/form.css">
+  <title>Document</title>
+</head>
+<body>
+<h1><a href="index.html">Volver</a></h1>
+<form action="" action="index.html" method="post">
+      <p>
+      <label for="origen">
+      <b>
+      ¿De dónde sos?
+      </b>
+      </label>
+      <br>
+      <select name="origen" id="origen">
+        <option value=arg"">
+          Argentina
+        </option>
+        <option value="brz">
+          Brazil
+        </option>
+        <option value="clm">
+          Colombia
+        </option>
+        <option value="mx">
+          Mexico
+        </option>
+      </select>
+      </p>
+
+      <p>
+        <label for="iluminacion">
+        <b>¿Qué te pareció la iluminación?</b>
+        </label>
+        <br>
+        <input type="checkbox" name="iluminacion" value="ma">Muy acorde
+        <br>
+        <input type="checkbox" name="iluminacion" value="b">Buena, pero podria mejorar
+        <br>
+        <input type="checkbox" name="iluminacion" value="m">Mala
+      </p>
+
+      <p>
+        <label for="gusto">
+        <b>¿Qué tipo de plato fue el que más te gustó?</b>
+        </label>
+        <br>
+        <input type="checkbox" name="iluminacion" value="entr">Entrada
+        <br>
+        <input type="checkbox" name="iluminacion" value="plaPrin">Plato principal
+        <br>
+        <input type="checkbox" name="iluminacion" value="post">Postre
+        <br>
+        <input type="checkbox" name="iluminacion" value="otr">Otros
+      </p>
+
+      <p>
+        <label for="recomendo">
+        <b>¿Recomendarías el lugar?</b>
+        </label>
+        <br>
+        <input type="radio" name="recomendo" value="s">Si
+        <br>
+        <input type="radio" name="recomendo" value="n">No
+      </p>
+
+      <p>
+        <label for="porque">
+        <b>¿Porqué?</b>
+        </label>
+        <br>
+        <textarea name="name" rows="8" cols="80"></textarea>
+      </p>
+
+      <p>
+        <label for="nombre">
+        Nombre
+        </label>
+        <input id="nombre" type="text" name="nombre" value="" placeholder="Ingrese nombre" required>
+      </p>
+
+      <p>
+        <label for="email">
+        Email:
+        </label>
+        <input id="email" type="email" placeholder="Ingrese su email" name="email" value="" required>
+      </p>
+
+      <p id="bajo">
+        <button type="submit" name="button" id="bot">
+         Enviar
+       </button>
+      <button type="reset" name="button" id="rei">
+        Reiniciar
+      </button>
+      </p>
+  </form>
+</body>
+</html>

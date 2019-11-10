@@ -1,0 +1,14 @@
+body {
+  background-color: #18bc9c;
+}
+section {
+  color: white;
+}
+#navbarNav.navbar-nav{
+  float: left;
+}
+
+header {
+  text-align: center;
+  color: white; 
+}

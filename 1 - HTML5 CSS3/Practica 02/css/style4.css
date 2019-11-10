@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:700&display=swap');
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: white;
+}
+
+section {
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 80%;
+    float: right;
+}
+
+#a{
+  height: 10vh;
+  width: 80%;
+  background-color: white;
+}
+#b {
+  width: 80%;
+}
+
+#a p {
+  float: right;
+  color: black;
+}
+
+#b h1 {
+  font-size: 68px;
+}
+
+
+h3{
+
+    color: rgb(0,179,179)
+}

@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:700&display=swap');
+
+
+body {
+  background-color: brown;
+  font-family: 'Open Sans', sans-serif;
+}
+
+section{
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 80%;
+
+      margin-left: 10%;
+}
+
+#derecha
+{
+  width: 80%;
+  height: 100vh;
+  float: left;
+  background-color: white;
+  background-image: url("../img/emilia-about.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#izquierda
+{
+    width: 20%;
+    height: 100vh;
+    float: left;
+    background-color: white;
+}
+
+
+#a{
+  height: 30%;
+}
+
+#b h1{
+  font-size: 68px;
+}
+
+#b h3,p{
+  color: rgb(0,179,179)
+}
+#derecha p {
+  float: right;
+  color: black;
+}

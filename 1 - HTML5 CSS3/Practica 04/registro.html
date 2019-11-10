@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Craftsy - Registro</title>
+  <link rel="stylesheet" href="css/registroStyle.css">
+</head>
+<body>
+
+    <header>
+      <img src="img/logo.png" alt="">
+      <div>
+        <ul type="none">
+          <li><a href="index.html">SMARTPHONES</a></li>
+          <li><a href="">TABLESTS</a></li>
+          <li><a href="">COMPUTADORAS</a></li>
+        </ul>
+      </div>
+      <div id="menuDere">
+        <ul type="none">
+          <li><a href="login.html">LOGIN</a></li>
+          <li><a href="registro.html">REGISTRO</a></li>
+        </ul>
+      </div>
+    </header>
+    <section>
+      <form action="index.html" method="post">
+
+        <h1>REGISTRATE</h1>
+
+        <p>
+          <labe for="nombre">Nombre</labe>
+          <br>
+          <input type="text" name="nombre" value="" placeholder="Ingresa tu nombre" class="full" checked>
+        </p>
+
+        <p>
+          <labe for="email">Email</labe>
+          <br>
+          <input type="text" name="email" value="" placeholder="Ingresa tu email" class="full" checked>
+        </p>
+
+        <p>
+          <labe for="contrasenia">Contraseña</labe>
+          <br>
+          <input type="password" name="contrasenia" value="" placeholder="password" class="full" checked>
+        </p>
+
+        <p>
+          <labe for="pais" checked><b>Pais de nacimiento:</b></labe>
+          <br>
+          <select name="pais" id="pais">
+            <option value="arg">Argentina</option>
+            <option value="br">Brazil</option>
+            <option value="ch">Chile</option>
+            <option value="di">Dinamarca</option>
+          </select>
+        </p>
+        <p>
+          <label for="genero"><b>Genero: </b></label>
+          <br>
+          <input type="radio" name="genero" value="m">Masculino
+          <input type="radio" name="genero" value="f">Femenino
+          <input type="radio" name="genero" value="mf">Prefiero no decirlo
+        </p>
+        <p>
+          <labe for="hobbies"><b>Hobbies: </b></labe>
+          <br>
+          <input type="checkbox" name="hobbies" value="">Guitarra
+          <input type="checkbox" name="hobbies" value="">Futbol
+          <input type="checkbox" name="hobbies" value="">Tenis
+          <input type="checkbox" name="hobbies" value="">Programacion
+        </p>
+        <p>
+          <label for="comentarios"><b>Dejanos tus comentarios: </b></label>
+          <br>
+          <textarea name="comentarios" rows="8" cols="40"></textarea>
+          <br>
+          <input type="checkbox" name="comentarios" value="" checked>Acepto los terminos y condiciones
+        </p>
+        <p>
+          <input type="submit" name="Registrarme" value="Enviar">
+          <input type="reset" name="Cancelar" value="Reiniciar">
+        </p>
+        <p>
+          <button type="button" name="button">Regisrarme</button>
+          <button type="reset" name="button">Reiniciar</button>
+
+        </p>
+      </form>
+    </section>
+
+</body>
+</html>

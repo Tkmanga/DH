@@ -1,0 +1,10 @@
+md es una extension de archivos de background
+
+flaticon es una pagina para bajar iconos
+
+onepagelove.com es un ejemplar de paginas
+
+max-width nos sirve para especificar al navegador que el elemento x queremos que tenga
+EQUIS cantidad de px como medida, por que ? por que solo va tener eso como MAXIMO si la pantalla tiene espacio suficiente
+
+clear both  es un comando que limpia el flote de los elementos a un lado al otro o ambos

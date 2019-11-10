@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>001</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+
+  <p>
+    <!-- b: convierte el texto en negrita pero no es sematico -->
+    <!--strong: conviernte al texto en negritya y le dice al buscador que es importante ES sematico -->
+    <!-- i: pone la palabra en italic pero no es sematico -->
+    <!-- em: convierte en italic y le dice al buscador que lleva un enfasis por sobre el resto ES sematica  -->
+    <!-- mark: destaca remarcado una parte del texto para el lector  -->
+    <!-- cite: define el titulo de una obra por ejemplo  -->
+    <!--abbr: Esta etiqueta explica (cuando le pasamos el mouse por arriba del texto ) lo que significa el acronmo -->
+    <b>Lorem</b> ipsum <stron>dolor</stron> <i>sit</i> <em>amet</em>, <mark>consectetur</mark> <cite>adipisicing elit, sed do eiusmod tempor</cite> <abbr title="Digital House">incididunt</abbr> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+  <!-- el form formulario basico para el recibo y envio de informacion  -->
+  <form class="" action="index.html" method="post" >
+    <p>
+      <label for="nombre">
+        Nombre:
+      </label>
+      <br>
+      <input id="nombre" type="text" name="nombre" value="" placeholder="Ingrese su nombre" required>
+    </p>
+    <p>
+      <label for="email" id="dos">
+          Email:
+      </label>
+      <br>
+      <input id="email" type="email" name="email" value="" placeholder="ejemplo@ejemplo.com" required>
+    </p>
+    <p>
+      <label for="pass">
+        Contraseña:
+      </label>
+      <br>
+      <input id="pass" type="password" name="pass" value="" placeholder="ingrese su contraseña" required>
+    </p>
+    <p>
+      <label for="">
+
+      </label>
+    </p>
+    <!-- radio -->
+    <p>
+      <label for="cine">Ya asisitio al cine este año ? </label>
+      <br>
+      <input type="radio" name="cine" value="s"> Si
+      <br>
+      <input type="radio" name="cine" value="n" checked> No
+    </p>
+
+    <p>
+      <label for="cine">Ya asisitio al cine este año ? </label>
+      <br>
+      <input type="checkbox" name="genero" value="t" checked> Terror
+      <br>
+      <input type="checkbox" name="genero" value="s"> Suspenso
+      <br>
+      <input type="checkbox" name="genero" value="c"> Comedia
+      <br>
+      <input type="checkbox" name="genero" value="d"> Drama
+    </p>
+    <p>
+      <label for="pais">Pais:</label>
+      <br>
+      <select class="" name="pais" id="pais">
+        <option value="arg" >
+          Argentina
+        </option>
+        <option value="br">
+          Brazil
+        </option>
+        <option value="co">
+          Colombia
+        </option>
+        <option value="mx">
+          Mexico
+        </option>
+      </select>
+    </p>
+    <p>
+      <label for="cin">Comentarios</label>
+      <br>
+      <textarea name="name" rows="8" cols="80"></textarea>
+    </p>
+
+    <p>
+      <!--
+      <input type="submit" name="" value="Enviar">
+     -->
+     <button type="submit" name="button">
+       Enviar
+     </button>
+    <button type="reset" name="button">
+      Reiniciar
+    </button>
+    </p>
+  </form>
+
+
+
+  <ul type="upper-roman">
+    <li>as</li>
+    <li>as</li>
+  </ul>
+  <ol type="I" start="2">
+    <li>asd</li>
+    <li>asd</li>
+  </ol>
+  <h1>Cajas</h1>
+  <header class="">
+    Primer div
+  </header>
+  <section class="products">
+    <article class="">
+      Segundo div
+    </article>
+    <div class="">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, <span>accusamus</span>  ratione sint maiores modi, iusto perferendis pariatur non nostrum quasi doloribus est ducimus cum, doloremque magni eveniet. Debitis, deleniti officia?
+    </div>
+  </section>
+  <footer >
+    Tercer div
+  </footer>
+</body>
+
+</html>
