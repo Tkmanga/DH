@@ -16,18 +16,44 @@ Seccion intro
 
 section#intro {
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 800px;
   color: white;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
 }
-
+section#intro img {
+  width: 100%;
+}
 /*
 Seccion servicios
 */
 section#servicios {
   color: white;
-  text-align: center; 
+  text-align: center;
+}
+
+/*
+Seccion productividad
+*/
+section#productividad {
+  color: white;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  max-width: 900px;
+  flex-wrap: wrap;
+}
+
+section#productividad >* {
+  width: 50%;
+}
+
+@media (max-width:576px) {
+
+  section#productividad > * {
+    width: 100%;
+    text-align: center;
+  }
 }
