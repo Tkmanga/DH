@@ -24,6 +24,26 @@
       }
   }
 
+public function FunctionName($value='')
+{
+  if(strlen($_POST["password"])==0&&strlen($_POST["confirmar"])==0)
+ {
+   return "Los dos campos de contraseña estan vacios";
+ }
+   if(strlen($_POST["password"])==0&&strlen($_POST["confirmar"])>=1)
+ {
+   return "La contraseña esta vacia";
+ }
+  if(strlen($_POST["password"])>=1&&strlen($_POST["confirmar"])==0)
+ {
+   return "Falta la confirmacion de la contraseña";
+ }
+   if($_POST["password"]!=$_POST["confirmar"])
+ {
+   return "Las contraseñas no verifican";
+ }
+   return "Correcto"; 
+}
 ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
