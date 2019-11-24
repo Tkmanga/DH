@@ -1,5 +1,4 @@
-
-
+<!DOCTYPE html>
 <?php
   if ($_FILES) {
       if ($_FILES["cv"]["error"]!=0) {
@@ -23,9 +22,7 @@
           }
       }
   }
-
 ?>
-<!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
