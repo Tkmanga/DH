@@ -6,6 +6,7 @@
 		<title>Craftsy | Login</title>
 	</head>
 	<body>
+
 		<div class="container"> <!-- Contenedor ppal -->
 			<header> <!-- Encabezadp -->
 				<nav class="main-nav">
