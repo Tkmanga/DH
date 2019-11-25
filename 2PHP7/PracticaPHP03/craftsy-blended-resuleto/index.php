@@ -1,9 +1,38 @@
 <!DOCTYPE html>
 <?php
-function FunctionName($value='')
-{
-	// code...
-}
+
+$articulos = [
+  0=>[
+    "nombre "=>"Producto 1",
+    "imagen"=>"img/img-phone-01.jpg",
+    "info"=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+    ],
+  1=>[
+    "nombre "=>"Producto 2",
+    "imagen"=>"img/img-phone-02.jpg",
+    "info"=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+    ],
+  2=>[
+    "nombre "=>"Producto 3",
+    "imagen"=>"img/img-phone-03.jpg",
+    "info"=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+    ],
+  3=>[
+    "nombre "=>"Producto 4",
+    "imagen"=>"img/img-phone-01.jpg",
+    "info"=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+    ],
+  4=>[
+    "nombre "=>"Producto 5",
+    "imagen"=>"img/img-phone-02.jpg",
+    "info"=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+    ],
+  5=>[
+    "nombre "=>"Producto 6",
+    "imagen"=>"img/img-phone-03.jpg",
+    "info"=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+    ]
+];
  ?>
 <html>
 	<head>
@@ -30,55 +59,49 @@ Modificar la maqueta para que en el espacio donde se imprimen las descripciones 
 Agregar un valor booleano a los “articulos” que sea “estaEnOferta”. Si el artículo está en oferta se le hace un 20% de descuento al precio original. Generar una función para calcular los precios finales y mostrarlos en la visualización del usuario.
 -->
 		<div class="container"> <!-- Contenedor ppal -->
-			<header> <!-- Encabezadp -->
-				<nav class="main-nav">
-					<a href="index.html"><img class="logo" src="img/logo.png" alt="logo craftsy"></a>
-					<ul class="menu">
-						<li><a href="#">Smartphones</a></li>
-						<li><a href="#">Tablets</a></li>
-						<li><a href="#">Computadoras</a></li>
-					</ul>
-					<ul class="menu access">
-						<li><a href="login.html">login</a></li>
-						<li><a href="register.html">registro</a></li>
-					</ul>
-				</nav>
-			</header>
+      <?php include("header.php"); ?>
 			<main> <!-- Cuerpo principal del sitio -->
 				<section class="product-container"><!-- Contenedor de todos los productos -->
-					<article class="producto"><!-- Contenedor de cada producto -->
+          <?php foreach ($articulos as $key => $value) {?>
+            <article class="producto"><!-- Contenedor de cada producto -->
+              <?php foreach ($value as $key2 => $value2): ?>
+                    <?php  ?>
+              <?php endforeach; ?>
+            </article>
+          <?php } ?>
 						<img class="main-photo" src="img/img-phone-01.jpg" alt="">
-						<h2 class="name">Nombre del Producto</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+						<h2 class="name">Producto 1</h2>
+						<p></p>
 						<a class="more" href="#">ver más</a>
-					</article>
-					<article class="producto">
+
+
+          <article class="producto">
 						<img class="main-photo" src="img/img-phone-02.jpg" alt="">
-						<h2 class="name">Nombre del Producto</h2>
+						<h2 class="name">Producto 2</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 						<a class="more" href="#">ver más</a>
 					</article>
 					<article class="producto">
 						<img class="main-photo" src="img/img-phone-03.jpg" alt="">
-						<h2 class="name">Nombre del Producto</h2>
+						<h2 class="name">Producto 3</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 						<a class="more" href="#">ver más</a>
 					</article>
 					<article class="producto">
 						<img class="main-photo" src="img/img-phone-01.jpg" alt="">
-						<h2 class="name">Nombre del Producto</h2>
+						<h2 class="name">Producto 4</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 						<a class="more" href="#">ver más</a>
 					</article>
 					<article class="producto">
 						<img class="main-photo" src="img/img-phone-02.jpg" alt="">
-						<h2 class="name">Nombre del Producto</h2>
+						<h2 class="name">Producto 5</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 						<a class="more" href="#">ver más</a>
 					</article>
 					<article class="producto">
 						<img class="main-photo" src="img/img-phone-03.jpg" alt="">
-						<h2 class="name">Nombre del Producto</h2>
+						<h2 class="name">Producto 6</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 						<a class="more" href="#">ver más</a>
 					</article>
