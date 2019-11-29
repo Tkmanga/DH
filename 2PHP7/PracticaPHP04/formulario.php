@@ -2,7 +2,6 @@
   $errores=[];
   $nombre= "";
   $email = "";
-  echo $numero;
   if ($_POST)
   {
     if (isset($_POST["nombre"]))
@@ -35,11 +34,12 @@
         $email = $_POST["email"];
       }
     }
+    if(count($errores)==0){
+      header("location:felicitaciones.php");
+    }
   }
 
-  if(count($errores)==0){
-    header("location:felicitaciones.php");
-  }
+
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
