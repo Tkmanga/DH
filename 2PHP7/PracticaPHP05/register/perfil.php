@@ -13,6 +13,7 @@ if ($_GET) {
       $nombre=$key["nombre"];
       $email=$key["email"];
       $nombreUsuario=$key["userName"];
+      $avatarUsuario=$key["dirImagen"];
     }
   }
 }
@@ -41,6 +42,11 @@ if ($_GET) {
             <div class='container'>
                 <label for='username' >Nombre de usuario:</label><br/>
                 <input type='text' name='username' id='username' maxlength="50"  value="<?=$nombreUsuario ?>"/><br/>
+            </div>
+
+            <div class="container">
+              <br>
+              <img src="imgUsuarios/<?=$avatarUsuario?>" alt="avatar del usuario" width="100px">
             </div>
         </fieldset>
     </form>

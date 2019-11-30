@@ -91,11 +91,14 @@ if ($_POST)
 
 function crearUsuario($nombre,$userName,$email,$password)
 {
+
+  $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
   $usuarioNuevo = [
 		"nombre"=>$nombre,
 		"userName"=>$userName,
     "email"=>$email,
-    "password" => password_hash($password,PASSWORD_DEFAULT)
+    "password" => password_hash($password,PASSWORD_DEFAULT),
+    "dirImagen" => "$userName.".$ext
   ];
   guardarUsuario($usuarioNuevo);
 }
@@ -105,25 +108,31 @@ function guardarUsuario($usuarioNuevo){
   $datos = json_decode($base,true);
   $datos[] = $usuarioNuevo;
   $jsonFinal = json_encode($datos);
-  guardarImagen();
+  guardarImagen($usuarioNuevo);
   file_put_contents("json/usuarios.json",$jsonFinal.PHP_EOL);
 
 }
 
-function guardarImagen(){
-  if ($_FILES) {
-      if ($_FILES["cv"]["error"]!=0) {
-        echo "hubo un error al cargar el avatar";
-      }else{
-          $ext = pathinfo($_FILES["cv"]["name"], PATHINFO_EXTENSION);
-          if ($ext !="jpg" && $ext != "png" && $ext !="jpeg") {
-            echo "no admitimos esa extension de archivo para el avatar";
-          }else {
-            move_uploaded_file($_FILES["cv"]["tmp_name"],"imgUsuarios/avatar.".$ext);
-          }
+function guardarImagen($usuarioNuevo){
+  $usuario = $usuarioNuevo["userName"];
+  if ($_FILES)
+  {
+    if ($_FILES["avatar"]["error"]!=0) {
+      echo "hubo un error al cargar el avatar";
+    }
+    else
+    {
+      $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
+      if ($ext !="jpg" && $ext != "png" && $ext !="jpeg")
+      {
+        echo "no admitimos esa extension de archivo para el avatar";
       }
-
+      else
+      {
+        move_uploaded_file($_FILES["avatar"]["tmp_name"],"imgUsuarios/$usuario.".$ext);
       }
+    }
+  }
 }
 
 
