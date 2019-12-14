@@ -1,0 +1,43 @@
+Juego = Estanciero
+  Jugadores
+    Avatar
+  Propiedades
+    casillero (posicion)
+    dueño
+    precioDeVenta
+    precioDeAlquiler
+    nombre
+    ----------------
+    vender
+  Dados
+  Dinero
+https://www.tutorialspoint.com/design_pattern/index.htm
+/////////////////////////
+Escuela
+  Aula
+    Capacidad 
+    Proyector
+    HornoBarro
+
+
+Alumno
+  nivel de cocinero
+  Nombre
+  apellido
+  dni
+  telefono
+inscripcion
+  alumno
+  fecha
+  nota
+Curso > Entrada, plato principal, Postre
+  Nombre
+  Duracion
+  Inscriptos (lista de alumnos )
+  Profesor (cocinero)
+  agregarCurso
+Aula
+Empleado > cocinero[dictar clases], administrativo[ dar de alta alumnos ], general
+  nombre
+  apellido
+  nroLegajo
