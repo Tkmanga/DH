@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <?php
+
+declare(strict_types=1);
+
+
 include("mascota.php");
+include("persona.php");
 $perro = new Mascota();
 $gato = new Mascota();
 
@@ -15,7 +20,13 @@ $gato->edad=3;
 //var_dump($perro,$gato);
 //echo "hola soy ". $gato->nombre. " la ". $gato->nombre." ". $gato->color."<br>";
 //$gato->jugar();
-$gato->describirse();
+//$gato->describirse();
+$dario = new Persona("jose","dario");
+$dario->setHobby("Netflix");
+$dario->setHobby("Cine");
+$dario->setMascota($perro);
+$dario->getMascota()->describirse();
+
  ?>
 <html lang="en" dir="ltr">
   <head>
