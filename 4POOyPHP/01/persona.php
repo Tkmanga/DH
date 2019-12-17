@@ -4,7 +4,8 @@
  */
 
  include_once("mascota.php");
-class Persona
+ include_once("jugable.php");
+class Persona implements Jugable
 {
 
   private $nombre;
@@ -58,6 +59,13 @@ class Persona
   public function setEdad(Integer $edadUsuario)
   {
     $this->edad=$edadUsuario;
+  }
+  public function jugar()
+  {
+    echo "Juego como un humano";
+  }
+  public function jugarConJuguete($juguete){
+    echo "juego con un ".$juguete." <br>";
   }
 }
 

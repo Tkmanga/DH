@@ -5,11 +5,14 @@
 class Animal
 {
 
-    public $color;
-    public $especie;
-    public $edad;
+    private $color;
+    private $especie;
+    private $edad;
 
-
+    public function __construct($especie,$edad){
+      $this->especie=$especie;
+      $this->edad=$edad;
+    }
     public function getColor()
     {
       return $this->color;
