@@ -1,0 +1,16 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arimo', Helvetica, Arial, sans-serif;
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  p {
+    color: #8b8e94;
+  }

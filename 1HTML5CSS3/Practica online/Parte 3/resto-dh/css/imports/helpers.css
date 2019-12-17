@@ -1,0 +1,48 @@
+.__text-combo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 10;
+  }
+  
+  .__text-combo.__dark {
+    color: #000;
+  }
+  
+  .__text-combo.__light {
+    color: #fff;
+  }
+  
+  .__text-combo h2 {
+    color: #FFA33E;
+    font-size: 3em;
+    font-family: 'Pinyon Script', fantasy;
+    margin-bottom: -38px;
+  }
+  
+  .__text-combo h3 {
+    font-size: 4em;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .__max-width {
+    max-width: 990px;
+    margin: 0 auto;
+  }
+  
+  .__pads-y {
+    padding: 100px 0;
+  }

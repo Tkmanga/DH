@@ -1,0 +1,9 @@
+nav {
+    background-color: #000;
+  }
+  
+  nav .navbar-brand h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 8px;
+  }

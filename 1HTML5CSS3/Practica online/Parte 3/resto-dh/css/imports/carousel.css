@@ -1,0 +1,39 @@
+.__wrapper-carousel .carousel-inner > * {
+    min-height: 60vh;
+  }
+  
+  .__wrapper-carousel .carousel-inner .carousel-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .__wrapper-carousel .carousel-inner .carousel-item::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }
+  
+  .__wrapper-carousel .carousel-inner .carousel-item.slide1 {
+    background-image: url("../img/hero_bg_1.jpg");
+  }
+  
+  .__wrapper-carousel .carousel-inner .carousel-item.slide2 {
+    background-image: url("../img/hero_bg_2.jpg");
+  }
+  
+  .__wrapper-carousel .carousel-inner .carousel-item.slide3 {
+    background-image: url("../img/hero_bg_3.jpg");
+  }
