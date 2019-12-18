@@ -10,7 +10,7 @@ class Habilidad
   public function __construct($nombreUser, $experticeUser)
   {
     $this->setNombre($nombreUser);
-    $this->setExpertice(validarNum($experticeUser));
+    $this->setExpertice($this->validarNum($experticeUser));
   }
   public function validarNum($value)
   {

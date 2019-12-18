@@ -25,15 +25,12 @@ Agregar en usuario.php el método mostrarTelefono. El método debe retornar un s
 Agregar en usuario.php el método llamar. El mismo debe recibir un Usuario y el tiempo de duración de la llamada. La función debe retornar el costo de la llamada. Si ambos usuarios cuentan con el mismo proveedor de línea, la llamada es gratis. Si
 esto no es así la llamada cuesta $10 por minuto.
 Crear una clase llamada Habilidad. La misma debe tener dos atributos: nombre y expertise (expertise es un número entre 0 y 5). Definir los atributos como privados. Definir los getters, setters y constructor de la clase.
-
-
-
-
-
 Agregar en la clase Usuario la posibilidad de que un Usuario pueda tener muchas Habilidades
 Modificar las instancias en prueba.php para que cada usuario tenga 3 habilidades.
-Agregar en la clase Usuario el método sabeHacer la misma recibe un string y un puntaje. La función devuelve verdadero únicamente si el string recibido es el nombre de una de las habilidades del usuario y si el puntaje es menor al expertise del usuario en esa habilidad. En caso contrario, retorna falso.
+Agregar en la clase Usuario el método sabeHacer la misma recibe un string y un puntaje.
+ La función devuelve verdadero únicamente si el string recibido es el nombre de una de las habilidades del usuario y si el puntaje es menor al expertise del usuario en esa habilidad. En caso contrario, retorna falso.
 Agregarle al usuario el atributo id junto con su getter y setter.
+
 Agregarle al usuario el método guardar. Para esto:
 Queda a criterio del alumno en qué soporte almacenar la información del Usuario
 Si el usuario no tiene id, esto significa que el usuario es nuevo y debería hacerse una inserción
