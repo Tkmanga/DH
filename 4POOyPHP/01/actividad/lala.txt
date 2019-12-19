@@ -33,6 +33,7 @@ Agregarle al usuario el atributo id junto con su getter y setter.
 
 Agregarle al usuario el método guardar. Para esto:
 Queda a criterio del alumno en qué soporte almacenar la información del Usuario
+
 Si el usuario no tiene id, esto significa que el usuario es nuevo y debería hacerse una inserción
 Si el usuario ya tiene id asignado debe realizarse un update
 Generar una función que retorne todos los usuarios almacenados. Esta función no debe retornar arrays sino objetos Usuario. Tener cuidado con que estos objetos usuarios tengan su id correspondiente y no volver a encriptar la contraseña

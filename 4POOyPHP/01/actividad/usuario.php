@@ -5,6 +5,7 @@
 
 include_once("Celular.php");
 include_once("Habilidad.php");
+include_once("controladorUsuario.php");
 
 class Usuario
 {
@@ -51,7 +52,10 @@ class Usuario
     }
     return false;
   }
-
+  public function guardar()
+  {
+    
+  }
   public function llamar(Usuario $elOtro, int $tiempoEnSeg)
   {
     $costo = "$ ";
