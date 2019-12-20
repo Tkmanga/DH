@@ -24,7 +24,7 @@ $user->setHabilidades($habilidad3);
 //var_dump($user->mail);
 //var_dump($user->getContrasenia());
 
-pre($user->sabeHacer("Nadar",5));
+pre($user->guardar());
  ?>
 <html lang="es" dir="ltr">
   <head>

@@ -30,11 +30,13 @@ Modificar las instancias en prueba.php para que cada usuario tenga 3 habilidades
 Agregar en la clase Usuario el método sabeHacer la misma recibe un string y un puntaje.
  La función devuelve verdadero únicamente si el string recibido es el nombre de una de las habilidades del usuario y si el puntaje es menor al expertise del usuario en esa habilidad. En caso contrario, retorna falso.
 Agregarle al usuario el atributo id junto con su getter y setter.
-
 Agregarle al usuario el método guardar. Para esto:
 Queda a criterio del alumno en qué soporte almacenar la información del Usuario
 
+
 Si el usuario no tiene id, esto significa que el usuario es nuevo y debería hacerse una inserción
+
 Si el usuario ya tiene id asignado debe realizarse un update
+
 Generar una función que retorne todos los usuarios almacenados. Esta función no debe retornar arrays sino objetos Usuario. Tener cuidado con que estos objetos usuarios tengan su id correspondiente y no volver a encriptar la contraseña
 Agregarle al usuario el método eliminar que lo elimine de la base de datos en caso de ya tener id asignado.

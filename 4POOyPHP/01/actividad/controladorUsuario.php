@@ -1,9 +1,14 @@
 <?php
-function armarArrayUsuario($array) {
+include_once("Usuario.php");
+include_once("Celular.php");
+
+function armarArrayUsuario(Usuario $user) {
     $usuarioParaGuardar = [
-        "nombre" => trim($array['nombre']),
-        "email" => $array['email'],
-        "password" => password_hash($array['password'], PASSWORD_DEFAULT)
+        "nombre" => trim($user->getNombre()),
+        "email" => $user->getMail(),
+        "password" => $user->getContrasenia(),
+        "celular"=> $user->getDatos(),
+        "habilidades"=> $user->getArrayHabilidades()
     ];
     return $usuarioParaGuardar;
 }

@@ -52,9 +52,12 @@ class Usuario
     }
     return false;
   }
+
   public function guardar()
   {
-    
+    $elUsuario = armarArrayUsuario($this);
+    $elUsuario = json_encode($elUsuario);
+    file_put_contents('BD.json', $elUsuario . PHP_EOL, FILE_APPEND);
   }
   public function llamar(Usuario $elOtro, int $tiempoEnSeg)
   {
@@ -68,15 +71,39 @@ class Usuario
       return $costo;
     }
   }
-
+  public function getDatos()
+  {
+    $datosCelular = [
+      "marca" => $this->celular->getMarca(),
+      "modelo" => $this->celular->getModelo(),
+      "proveedor" => $this->celular->getProveedor(),
+      "numero" => $this->celular->getNumero()
+    ];
+    return $datosCelular;
+  }
     /**
      * Get the value of Habilidades
      *
      * @return mixed
      */
-    public function getHabilidades()
+
+     public function getHabilidades()
+     {
+       return $this->habilidades;
+     }
+    public function getArrayHabilidades()
     {
-        return $this->habilidades;
+        $aux = $this->getHabilidades();
+        $arrayHabilidades = [];
+        for ($i=0; $i < count($aux) ; $i++) {
+
+          $aux2 = [
+            "nombre" => $aux[$i]->getNombre(),
+            "expertice" => $aux[$i]->getExpertice()
+          ];
+          $arrayHabilidades[$i] = $aux2;
+        };
+        return $arrayHabilidades;
     }
 
     /**
