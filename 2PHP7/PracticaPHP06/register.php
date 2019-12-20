@@ -168,7 +168,6 @@ function validarIdExist($idUsuario)
 {
     $base = file_get_contents("json/usuarios.json");
     $datos = json_decode($base,true);
-    
 
 }
 

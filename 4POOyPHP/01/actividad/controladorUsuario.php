@@ -4,6 +4,7 @@ include_once("Celular.php");
 
 function armarArrayUsuario(Usuario $user) {
     $usuarioParaGuardar = [
+        "id"=> $user->getId(),
         "nombre" => trim($user->getNombre()),
         "email" => $user->getMail(),
         "password" => $user->getContrasenia(),

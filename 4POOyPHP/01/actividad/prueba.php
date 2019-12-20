@@ -20,11 +20,11 @@ $user = new Usuario("pepe","pepe@gmail.com",123456, $celular,$habilidad1);
 $user2 = new Usuario("popi","paleta",123456,$celular2,$habilidad2);
 $user->setHabilidades($habilidad4);
 $user->setHabilidades($habilidad3);
-
+$user3 = new Usuario("lala","tacachojose@gmail.com",123456,$celular,$habilidad2);
 //var_dump($user->mail);
 //var_dump($user->getContrasenia());
 
-pre($user->guardar());
+pre($user3->guardar());
  ?>
 <html lang="es" dir="ltr">
   <head>
