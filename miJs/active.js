@@ -261,7 +261,7 @@ var myStr = "Jello world";
 // myStr[0] = "H";
 
 var myStr = "Hello world";
-console.log(myStr);
+//console.log(myStr);
 
 //Bracket notation to find nth character in string
 
@@ -283,4 +283,187 @@ var lastLetterOfFirstName = firstName[firstName.length-1];
 var lastName = "Lovelace";
 
 //Only change code below this line
-var lastLetterOfLastName = lastName; 
+var lastLetterOfLastName = lastName[lastName.length-1];
+
+//bracket notation to find nth-to-last character in string
+
+//example
+var firstName = "Ada";
+var thirdToLastLetterOfFirstName = firstName=[firstName.length-3];
+
+//setup
+var lastName = "Lovelace";
+
+//only change code below this line
+
+var secondToLastLetterOfLastName = lastName[lastName.length-2];
+
+//words blanks
+
+function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+  //your code below this line
+  var result = "";
+  result += "The "+ myAdjective + " " + myNoun +" "+ myVerb +" "+ " to the store " + myAdverb;
+  //your code below this line
+
+  return result;
+}
+
+console.log(wordBlanks("dog","big","ran","quickly"));
+console.log(wordBlanks("bike","slow","flew","slowly"));
+
+//store multiple values with arrays
+
+//example
+
+var ourArray = ["Jhon",23];
+
+//only change code below this line
+var myArray = ["Quincy",1];
+
+//Nested arrays
+var ourArray = [["the universe",42],["everithing, 100101"]];
+//only change code below this line
+var myArray = [["bulls",23],["white sox",45]];
+
+//Access Array data with indexes
+var ourArray = [50,60,70];
+var ourData = ourArray[0]; //equals 50
+
+//setup
+var myArray = [50,60,70];
+
+//only change code below this line
+var myData = myArray[0];
+console.log(myData);
+
+//Modify array data with indexes
+
+var ourArray = [18,64,99];
+ourArray[1]=45; //our array now equals [18,45,99];
+
+var myArray = [18,64,99];
+//only change code below this line
+myArray[0]=45;
+console.log(myArray);
+
+//Access multi-dimensional arrays with indexes
+var myArray = [[1,2,3],[4,5,6],[7,8,9],[[10,11,12],13,14]];
+//only change code below this line
+var myData = myArray[2][1];
+console.log(myData);
+
+//Manipulate Arrays with push()
+
+//example
+var ourArray = ["Stipmson","J","cat"];
+ourArray.push(["happy","joy"]);
+// ourArray now equals ["Stipmson","J","cat",["happy","joy"]];
+
+//setup
+
+var myArray = [["Jhon",23],["cat",2]];
+
+//only change code below this line
+
+myArray.push("dog",3);
+
+//Manipulate arrays with pop
+
+var ourArray = [1,2,3];
+var removedFromOurArray = ourArray.pop();
+// removedFromOurArray now equals 3, and ourArray now equals [1,2]
+// setup
+var myArray = [["Jhon",23],["cat",2]];
+
+//only change code below this line
+
+var removedFromMyArray = myArray.pop();
+console.log(removedFromMyArray);
+
+//manipulate arrays with shift()
+
+var ourArray = ["Stipmson","J",["cat"]];
+var removedFromOurArray = ourArray.shift();
+
+// removedFromOurArray now equals "Stimpson" and ourArray now equals ["J",["cat"]]
+
+//setup
+
+var myArray = [["Jhon",23],["dog",3]];
+//Only change code below this line
+
+var removedFromMyArray = myArray.shift();
+console.log(removedFromMyArray);
+
+//manipulate arrays with unshift()
+
+var ourArray = ["Stimpson","J","cat"];
+ourArray.shift(); //ourArray now equals ["J","cat"];
+ourArray.unshift("Happy");//ourArray now equals ["Happy","J","cat"];
+
+//setup
+var myArray = [["Jhon",23],["dog",3]];
+myArray.shift();
+
+//Only change code below this line
+myArray.unshift(["Paul",35]);
+console.log(myArray[1][1]);
+
+//Shopping list
+
+var myList = [["cereal",3],["milk",2],["bananas",3],["juice",2],["eggs",12]];
+
+//write reusable code with function
+function ourReusableFunction() {
+  console.log("Heyya , world");
+}
+//ourReusableFunction();
+
+function reusableFunction() {
+  console.log("Hi world");
+}
+
+// reusableFunction();
+
+// Passing values to function with arguments
+
+function ourFunctionWithArgs(a,b) {
+  console.log(a-b);
+}
+//ourFunctionWithArgs(10,5); //output 5
+
+function functionWithArgs(a,b) {
+  console.log(a+b);
+}
+
+//functionWithArgs(10,5);
+
+//Global Scope and functions
+var myGlobal = 10;
+//Declare your variable here
+function fun1() {
+  //Assign 5 to oopsGlobal Here
+  oopsGlobal = 5;
+  // if we dont put the keyword VAR before the name of the variable automatly the variable is global anyway
+}
+//Only change code above this line
+
+function fun2() {
+  var output = "";
+  if (typeof myGlobal != "undefined") {
+    output += "myGlobal: "+myGlobal;
+  }
+  if (typeof oopsGlobal != "undefined") {
+      output += "oopsGlobal: "+ oopsGlobal;
+  }
+  console.log(output);
+}
+
+//local scope and functionWithArgs
+function myLocalScope() {
+  var myVarr = 5;
+  console.log(myVarr);
+}
+myLocalScope();
+console.log(myVarr);
