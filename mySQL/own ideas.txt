@@ -1,0 +1,33 @@
+proyectos propios para el 2020/1/2/3 
+
+web app de gestion de una casa. 
+La plataforma contendra los diferentes tipos de servicios que los integrantes/responsables de la casa elijan 
+y habiendo 1 head que pagara los servicios con tarjeta de credito/debito/efectivo/plataformas online 
+
+habra un menu general al que podran acceder todos los usuarios a ver las facturas del mes que estaran rodeados de un circulo
+en rojo si no se pago y un circulo en verde si se pago, de pagarse podran ademas de ver la factura ver el comprobante/ticket
+de pago se podran aderhir todo tipo de cosas pero principalmente "SERVICIOS BASICOS, SERVICIOS ADICIONALES DE UNA CASA, 
+CUENTAS COMPARTIDAS, CUOTAS DE COMPRAS GRANDES" 
+ejemplo: 
+	Servicio basico: 
+		Agua 
+		Luz 
+		Gas 
+		Telefono fijo
+		ABL	
+		*Rentas
+
+			 
+		Internet
+		Television cable 
+		Cuentas compartidas de STREAMING (Netflix, directv go, HULU, disney+, amazon prime, etc) 
+		gastos fijos de mascotas si tuvieran (comida, vacunas, etc) 
+
+Addon, economia de guerra,
+	La idea tambien es tener una opcion para poder visualizar las grandes compras para stock en crisis, 
+el stock de compras para crisis son mercaderia que tienen mucha duracion de vida como yerba atun etc etc 
+aca se va poder compartir las compras  
+
+addon, el sapo 
+
+esta parte servira para la gestion de casos de quejas, guardando  fecha y hora, agente que respondio al  medio (telefono, chat) y nro de caso, mas un breve ejemplo de lo que se arreglo, para que es esto ? para que los circulos tengan un historial e ir elevando las quejas 
