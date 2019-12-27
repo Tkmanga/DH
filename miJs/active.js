@@ -462,8 +462,8 @@ function fun2() {
 
 //local scope and functionWithArgs
 function myLocalScope() {
-  var myVarr = 5;
-  console.log(myVarr);
+  var asd = 5;
+  console.log(asd);
 }
 myLocalScope();
-console.log(myVarr);
+console.log(asd); // this variable is only for the funcion we can't acces directly
