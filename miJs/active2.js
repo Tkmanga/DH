@@ -443,6 +443,11 @@ function isLess(a,b) {
 //returning early pattern from functions
 //setup
 function abTest(a,b) {
+  if (a<0|| b<0) {
+    return undefined;
+  }
   //Only change code below this line
-  return Math.round(Math.pow())
+  return Math.round(Math.pow(Math.sqrt(a)+Math.sqrt(b),2))
 }
+
+print(abTest(-2,2));
