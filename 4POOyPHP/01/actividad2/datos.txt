@@ -1,0 +1,34 @@
+Utilizaremos el archivo cliente.php del campus.
+
+Agregar un método abstracto para debitar cierto monto que reciba como parámetro el monto y desde donde se está haciendo la transacción (cajero Banelco, cajero Link, caja). Agregar otro método (no abstracto) que permita acreditar cierto monto (y programar su comportamiento). (Tener en cuenta que cada método debe, además, modificar la fecha de último movimiento).
+Crear 4 clases llamadas Classic, Gold, Platinum y Black. Todas “hijas” de la clase Cuenta.
+Implementar los métodos debitar y acreditar en cada clase, con las siguientes reglas de negocio:
+Debitar:
+Classic: Si la transacción es desde un cajero Banelco, debe debitar un 5% mas. De Link un 10% mas. Desde caja no se agrega importe extra.
+Gold: Desde Banelco y Caja no se agrega importe extra. Desde Link un 5% mas.
+Platinum: 5% desde cualquier medio, a menos que la cuenta tenga un balance de 5.000 o más.
+Black: No se cobra importe extra.
+Acreditar: Utiliza la cuenta que realiza su padre, pero debe modificar el importe a acreditar según el tipo de cuenta.
+El banco se queda con un 5% si es Classic.
+Se queda con un 3% si es Gold, salvo que se esté acreditando 25.000 o más.
+Si es Platinum el banco no retiene nada.
+0% para Black o 4% para montos superiores a 1.000.000.
+Hacer los cambios necesarios en el Cliente, para que pueda tener una cuenta asociada. (Concepto de composición). Agregar la asignación de la cuenta en el constructor.
+Una vez por mes, el banco debe cobrarle a cada cliente por los servicios prestados. Cada Cliente deberá tener un método que permita cobrar los servicios:
+Si el cliente tiene cuenta Classic, el banco cobra un monto fijo de $100.
+Si el cliente tiene cuenta Gold, el banco cobra $10 por cada letra del apellido del cliente o $5 por cada letra de la razón social.
+Si el cliente tiene una cuenta Platinum el banco cobra un 10% del total del balance de la cuenta.
+Si el cliente tiene una cuenta Black, el banco cobra $500, más $100 multiplicado por el número de día de la semana en la que se hizo la última transacción.
+$date = '2016/09/28';
+
+$weekday = date('l', strtotime($date));
+
+Generar una interfaz “Liquidable” que declare un método liquidarHaberes. Tanto PYME como Multinacional deben implementar “Liquidable”. El método liquidarHaberes recibe una Persona y un monto en donde se le paga a la Persona dicho monto de la cuenta de la empresa.
+Dentro de PYME este método cobra un 1% de cada liquidación que desaparecen de la cuenta de la PYME.
+Dentro de Multinacional este método cobra un valor fijo de $500 que desaparecen de la cuenta de la Multinacional.
+Crear una interfaz “Imprimible” que declare un método mostrar. Este método deberá retornar lo que corresponda, según la clase que lo implemente:
+Para Persona, el nombre y apellido.
+Para PYME, la razón social
+Para Multinacional, la razón social.
+Para las cuentas, el balance.
+Crear un archivo “banco.php”, que instancie un Banco y lo llene con Clientes (que ya deben tener cuentas a la hora de ser creados). Luego de eso, realizar las operaciones disponibles como prueba, imprimiendo para cada una sobre qué Cliente se hizo y como queda el balance de su Cuenta luego de la operación.
