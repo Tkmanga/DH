@@ -27,9 +27,24 @@
   $cuenta1->saldoEnviar(1000001,"caja");
   //$cuenta1->debitar(400,'caja');
   $cuenta1->debitar(9000,"caja");
-  pre($cuenta1);
+  //pre($cuenta1);
 
-  $cuenta5->
+  $cuenta5->saldoEnviar(10000,"caja");
+  //pre($cuenta5);
+  $cuenta5->debitar(5000,"cajeroBanelco");
+  //pre($cuenta5);
+
+  $cuenta8->saldoEnviar(10000,"caja");
+  //pre($cuenta8);
+  $cuenta8->saldoEnviar(25001,"caja");
+  //pre($cuenta8);
+  $cuenta8->debitar(4000,"cajeroBanelco");
+  //pre($cuenta8);
+
+  $cuenta11->saldoEnviar(10000,"caja");
+  pre($cuenta11);
+  $cuenta11->debitar(2500,"caja");
+  pre($cuenta11);
  ?>
 <html lang="en" dir="ltr">
   <head>

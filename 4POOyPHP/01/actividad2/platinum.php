@@ -13,36 +13,44 @@ class Platinum extends Cuenta
     parent::setUltimoMovimiento($ultimoMovimiento);
   }
 
-  public function debitar($valor, $origen)
-  {
+  public function debitar($valor, $origen){
     $actual = parent::getBalance();
     if (!($actual>=5000)){
       switch ($origen) {
         case 'cajeroBanelco':
           $valor = $valor-($valor*0.05);
           $actual -= $valor;
+          self::registrar($actual,$origen);
           break;
         case 'cajeroLink':
           $valor = $valor-($valor*0.05);
           $actual -= $valor;
+          self::registrar($actual,$origen);
           break;
         case 'caja';
           $valor = $valor-($valor*0.05);
           $actual -= $valor;
+          self::registrar($actual,$origen);
           break;
         default:
           // code...
           break;
       }
-    };
-     setBalance($actual);
-    $var = recorder($origen);
-     setUltimoMovimiento($var);
+    }else{
+      self::registrar($valor,$origen);
+    }
+
    }
 
-   public function acreditarSaldo($valor,$origen)
+   private function registrar($dinero,$origen){
+     parent::setBalance($dinero);
+     $var = recorder($origen);
+     parent::setUltimoMovimiento($var);
+   }
+
+   public function saldoEnviar($valor,$origen)
    {
-     acreditar($valor,$origen);
+     parent::acreditar($valor,$origen);
    }
 }
  ?>

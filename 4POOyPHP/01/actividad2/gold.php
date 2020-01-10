@@ -30,20 +30,21 @@ class Gold extends Cuenta
         break;
     }
 
-     setBalance($actual);
+     parent::setBalance($actual);
 
     $var = recorder($origen);
-     setUltimoMovimiento($var);
-}
+     parent::setUltimoMovimiento($var);
+   }
 
 public function saldoEnviar($valor, $origen )
 {
   if (!($valor>=25000)) {
-    $saldoEnviar -= ($valor*0.03);
-     acreditar($saldoEnviar, $origen);
-    exit;
+
+    $valor = $valor - ($valor*0.03);
+     parent::acreditar($valor, $origen);
+  }else{
+    parent::acreditar($valor,$origen);
   }
-   acreditar($saldoEnviar,$origen);
 }
 
 }
