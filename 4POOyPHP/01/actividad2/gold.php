@@ -5,9 +5,11 @@
 class Gold extends Cuenta
 {
 
-  function __construct(argument)
+  function __construct($cbu,$balance,$ultimoMovimiento)
   {
-    // code...
+    parent::setCBU($cbu);
+    parent::setBalance($balance);
+    parent::setUltimoMovimiento($ultimoMovimiento);
   }
 
   public function debitar($valor, $origen)
@@ -28,14 +30,21 @@ class Gold extends Cuenta
         break;
     }
 
-    function setBalance($actual);
+     setBalance($actual);
+
+    $var = recorder($origen);
+     setUltimoMovimiento($var);
 }
 
-public function saldoEnviar($valor, $origen ){
+public function saldoEnviar($valor, $origen )
+{
   if (!($valor>=25000)) {
-    $saldoEnviar -= ($valor*0.05);
+    $saldoEnviar -= ($valor*0.03);
+     acreditar($saldoEnviar, $origen);
+    exit;
   }
-  function acreditar($saldoEnviar,$origen);
+   acreditar($saldoEnviar,$origen);
 }
+
 }
  ?>

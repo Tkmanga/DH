@@ -6,20 +6,22 @@
 class Classic extends Cuenta
 {
 
-  function __construct($balance)
+  function __construct($cbu,$balance,$ultimoMovimiento)
   {
-
+    parent::setCBU($cbu);
+    parent::setBalance($balance);
+    parent::setUltimoMovimiento($ultimoMovimiento);
   }
   public function debitar($valor, $origen)
   {
     $actual = parent::getBalance();
     switch ($origen) {
       case 'cajeroBanelco':
-        $valor += ($valor*0.05);
+        $valor = $valor-($valor*0.05);
         $actual -= $valor;
         break;
       case 'cajeroLink':
-        $valor += ($valor*0,10);
+        $valor = $valor-($valor*0.10);
         $actual -= $valor;
         break;
       case 'caja';
@@ -29,13 +31,15 @@ class Classic extends Cuenta
         // code...
         break;
     }
-    function setBalance($actual);
-
+    parent::setBalance($actual);
+    $var = recorder($origen);
+    parent::setUltimoMovimiento($var);
   }
 
-  public function saldoEnviar($valor, $origen ){
+  public function saldoEnviar($valor, $origen)
+  {
     $saldoEnviar -= ($valor*0.05);
-    function acreditar($saldoEnviar,$origen);
+    parent::acreditar($saldoEnviar,$origen);
   }
 }
  ?>
