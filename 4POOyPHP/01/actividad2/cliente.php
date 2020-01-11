@@ -1,7 +1,7 @@
 <?php
 
-//Defino variables privadas para la clase Cliente
-include_once("cuenta.php")
+include_once("cuenta.php");
+
 abstract class Cliente{
   Protected $nombre;
   Protected $apellido;
@@ -9,21 +9,31 @@ abstract class Cliente{
   Protected $nacimiento;
   Protected $email;
   Protected $pass;
+  Protected $cuenta;
 
 //Creo una función constructora con sus parámetros necesarios
 
   function __construct($nombre,$apellido,$documento,$nacimiento,$email,$pass, Cuenta $cuenta ){
-    $this->nombre = $nombre;
-    $this->apellido = $apellido;
-    $this->documento = $documento;
-    $this->nacimiento = $nacimiento;
-    $this->email = $email;
-    $this->pass = $pass;
-    $this->cuenta = $cuenta;
+    $this->setNombre($nombre);
+    $this->setApellido($apellido);
+    $this->setDocumento($documento);
+    $this->setNacimiento($nacimiento);
+    $this->setEmail($email);
+    $this->setPass($pass);
+    $this->setCuenta($cuenta);
   }
 
   //Creo funciones públicas para setear el valor pasado como parámetro al ejecutar la función constructora, como valor de la propiedad del objeto instanciado
 
+  public function setCuenta(Cuenta $cuentaUsuario)
+  {
+    $this->cuenta=$cuentaUsuario;
+  }
+
+  public function getCuenta()
+  {
+    return $this->cuenta->traerDatos();
+  }
   public function setNombre($nombre){
     $this->nombre = $nombre;
   }

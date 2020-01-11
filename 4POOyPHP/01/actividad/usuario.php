@@ -25,8 +25,6 @@ class Usuario
     $this->setCelular($celularUsuario);
     $this->setHabilidades($habilidadesUser);
     $this->id=Usuario::$contadorId++;
-
-
   }
 
   public function saludar()

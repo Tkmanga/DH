@@ -5,6 +5,10 @@
   include_once("gold.php");
   include_once("platinum.php");
   include_once("helpers.php");
+  include_once("cliente.php");
+  include_once("Persona.php");
+  include_once("PYME.php");
+  include_once("Multinacional.php");
 
 //creo las cuentas
   $cuenta1 = new Black(12, 1000, "caja");
@@ -42,10 +46,20 @@
   //pre($cuenta8);
 
   $cuenta11->saldoEnviar(10000,"caja");
-  pre($cuenta11);
+  //pre($cuenta11);
   $cuenta11->debitar(2500,"caja");
-  pre($cuenta11);
- ?>
+  //pre($cuenta11);
+
+  $cliente1 = new Persona("jose","tacacho",38285404,"06/05/1994","tacachojose@gmail.com","boldt1234",$cuenta1);
+  pre($cliente1);
+
+  $cliente2 = new PYME("20-12465874-8","monotributo","patagones 2972","01/01/2019","LALA LAND","asd123","lalaland@la.la",$cuenta5);
+  pre($cliente2);
+
+  $cliente3 = new Multinacional("YOUL","06/05/04","youl@hotmail.com","lalala2","98-788564125-4","internacional","calle falsa 123", );
+  pre($cliente3);
+
+   ?>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">

@@ -3,12 +3,13 @@ include_once("cliente.php");
 /**
  *
  */
-class PYME extends cliente
+class PYME extends Cliente
 {
   private $cuit;
   private $razonSocial;
   private $direccionFacturacion;
-  function __construct($cuitE, $razonSocial, $direccionFacturacion,$nacimiento, $nombre, $pass)
+
+  function __construct($cuitE, $razonSocial, $direccionFacturacion,$nacimiento, $nombre, $pass, $email, Cuenta $cuenta)
   {
     parent::setNombre($nombre);
     parent::setNacimiento($nacimiento);
@@ -17,6 +18,7 @@ class PYME extends cliente
     $this->cuit=$cuitE;
     $this->razonSocial=$razonSocial;
     $this->direccionFacturacion=$direccionFacturacion;
+    parent::setCuenta($cuenta);
   }
 
     /**

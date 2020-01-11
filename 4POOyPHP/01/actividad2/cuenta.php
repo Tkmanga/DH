@@ -64,6 +64,11 @@ abstract class Cuenta
       $var = recorder($origen);
       $this->setUltimoMovimiento($var);
     }
+
+    public function traerDatos()
+    {
+      return "hola";
+    }
 }
 
 
