@@ -16,6 +16,26 @@ class Persona extends Cliente
     parent::setPass($pass);
     parent::setCuenta($cuentaU);
   }
+
+  public function cobrarServicios()
+  {
+
+    $var = $this->getCuenta();
+    if ($var instanceOf Classic) {
+      $var = $this->getCuenta()->getBalance();
+      $var -=100;
+      $this->getCuenta()->setBalance($var);
+    }elseif (Gold) {
+      $var = $this->getCuenta()->getBalance();
+      $apellido = strlen(self::getApellido());
+      $var -=100;
+      $this->getCuenta()->setBalance($var);
+    }elseif (Platinum) {
+      // code...
+    }elseif (Black) {
+      // code...
+    }
+  }
 }
 
  ?>

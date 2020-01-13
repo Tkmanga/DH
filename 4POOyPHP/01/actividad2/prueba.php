@@ -51,13 +51,16 @@
   //pre($cuenta11);
 
   $cliente1 = new Persona("jose","tacacho",38285404,"06/05/1994","tacachojose@gmail.com","boldt1234",$cuenta1);
-  pre($cliente1);
+  //pre($cliente1);
 
   $cliente2 = new PYME("20-12465874-8","monotributo","patagones 2972","01/01/2019","LALA LAND","asd123","lalaland@la.la",$cuenta5);
-  pre($cliente2);
+  //pre($cliente2);
 
-  $cliente3 = new Multinacional("YOUL","06/05/04","youl@hotmail.com","lalala2","98-788564125-4","internacional","calle falsa 123", );
-  pre($cliente3);
+  $cliente3 = new Multinacional("YOUL","06/05/04","youl@hotmail.com","lalala2","98-788564125-4","internacional","calle falsa 123", $cuenta8 );
+  //pre($cliente3);
+
+  pre($cliente2->cobrarServicios());
+
 
    ?>
 <html lang="en" dir="ltr">

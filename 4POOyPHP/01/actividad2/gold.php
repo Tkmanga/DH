@@ -2,6 +2,8 @@
 /**
  *
  */
+
+
 class Gold extends Cuenta
 {
 
@@ -46,6 +48,7 @@ public function saldoEnviar($valor, $origen )
     parent::acreditar($valor,$origen);
   }
 }
+
 
 }
  ?>

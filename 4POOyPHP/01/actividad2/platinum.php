@@ -52,5 +52,6 @@ class Platinum extends Cuenta
    {
      parent::acreditar($valor,$origen);
    }
+
 }
  ?>

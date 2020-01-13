@@ -32,7 +32,7 @@ abstract class Cliente{
 
   public function getCuenta()
   {
-    return $this->cuenta->traerDatos();
+    return $this->cuenta;
   }
   public function setNombre($nombre){
     $this->nombre = $nombre;
@@ -70,5 +70,4 @@ abstract class Cliente{
   public function getPass(){
     return $this->pass;
   }
-
-  }
+}

@@ -61,6 +61,24 @@ class Multinacional extends Cliente
         return $this;
     }
 
+
+    public function cobrarServicios()
+    {
+      //$var = $this->getCuenta()->getBalance();
+      //$var -=100;
+      //$this->getCuenta()->setBalance($var);
+      $var = $this->getCuenta();
+      if ($var instanceOf Classic) {
+        return true;
+      }elseif (Gold) {
+        // code...
+      }elseif (Platinum) {
+        // code...
+      }elseif (Black) {
+        // code...
+      }
+    }
+
 }
 
 

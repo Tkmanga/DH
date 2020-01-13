@@ -160,7 +160,6 @@ class Usuario
         return password_hash($passAEncriptar , PASSWORD_DEFAULT);
       }
 
-
     public function getId()
     {
         return $this->id;

@@ -42,5 +42,6 @@ class Classic extends Cuenta
     $saldoEnviar = $valor - ($valor*0.05);
     parent::acreditar($saldoEnviar,$origen);
   }
+
 }
  ?>
