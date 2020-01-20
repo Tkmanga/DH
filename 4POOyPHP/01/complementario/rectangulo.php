@@ -1,36 +1,26 @@
 <?php
 include_once("figura.php");
+include_once("Comparable.php");
+include_once("Dibujable.php");
 /**
  *
  */
-class Rectangulo extends Figura
+class Rectangulo extends Figura implements Comparable, Dibujable
 {
   private $ancho;
   private $altura;
 
   function __construct($anchoU, $alturaU)
   {
-    self::setAncho($anchoU);
-    self::setAltura($alturaU);
+    $this->setAncho($anchoU);
+    $this->setAltura($alturaU);
   }
 
-    /**
-     * Get the value of Ancho
-     *
-     * @return mixed
-     */
     public function getAncho()
     {
         return $this->ancho;
     }
 
-    /**
-     * Set the value of Ancho
-     *
-     * @param mixed $ancho
-     *
-     * @return self
-     */
     public function setAncho($ancho)
     {
         $this->ancho = $ancho;
@@ -38,28 +28,42 @@ class Rectangulo extends Figura
         return $this;
     }
 
-    /**
-     * Get the value of Altura
-     *
-     * @return mixed
-     */
     public function getAltura()
     {
         return $this->altura;
     }
 
-    /**
-     * Set the value of Altura
-     *
-     * @param mixed $altura
-     *
-     * @return self
-     */
     public function setAltura($altura)
     {
         $this->altura = $altura;
 
         return $this;
+    }
+    public function getPerimetro(){
+      $var = 2*($this->getAncho()+$this->getAltura());
+      return $var;
+    }
+
+    public function getArea(){
+      $var = $this->getAncho()*$this->getAltura();
+      return $var;
+    }
+
+    public function equals($objB){
+      if (($this->getArea()==$objB->getArea())&&($this->getPerimetro()==$objB->getPerimetro())) {
+        return "Son iguales.";
+      }else {
+        return "No son iguales.";
+      }
+    }
+
+    public function dibujar()
+    {
+      $ancho = $this->getAncho();
+      $alto = $this->getAltura();
+      $img ="<svg width=$ancho height=$alto><rect  width=$ancho height=$alto stroke=green stroke-width=4 fill=yellow /></svg>";
+
+      return $img;
     }
 
 }
