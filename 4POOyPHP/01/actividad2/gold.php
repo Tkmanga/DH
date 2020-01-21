@@ -4,7 +4,7 @@
  */
 
 
-class Gold extends Cuenta
+class Gold extends Cuenta implements Imprimible
 {
 
   function __construct($cbu,$balance,$ultimoMovimiento)
@@ -47,6 +47,11 @@ public function saldoEnviar($valor, $origen )
   }else{
     parent::acreditar($valor,$origen);
   }
+}
+
+public function mostrar()
+{
+  return $this->getBalance();
 }
 
 

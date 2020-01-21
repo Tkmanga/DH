@@ -4,9 +4,9 @@
  */
 include_once("tools.php");
 include_once("cliente.php");
+include_once("imprimible.php");
 
-
-abstract class Cuenta
+abstract class Cuenta 
 {
 
   protected $CBU;
@@ -59,7 +59,7 @@ abstract class Cuenta
 
     abstract public function debitar($valor,$origen);
 
-    public function acreditar($valor,$origen)
+    public function acreditar($valor,$origen=Null)
     {
       $balanceAnterior = $this->getBalance();
       $balanceNuevo = $balanceAnterior+$valor;

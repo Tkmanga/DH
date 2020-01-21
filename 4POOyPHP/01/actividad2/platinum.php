@@ -3,7 +3,7 @@ include_once("cuenta.php");
 /**
  *
  */
-class Platinum extends Cuenta
+class Platinum extends Cuenta implements Imprimible
 {
 
   function __construct($cbu,$balance,$ultimoMovimiento)
@@ -51,6 +51,10 @@ class Platinum extends Cuenta
    public function saldoEnviar($valor,$origen)
    {
      parent::acreditar($valor,$origen);
+   }
+   public function mostrar()
+   {
+     return $this->getBalance();
    }
 
 }

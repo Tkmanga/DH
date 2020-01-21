@@ -1,9 +1,10 @@
 <?php
 include_once("cliente.php");
+include_once("liquidable.php");
 /**
  *
  */
-class Multinacional extends Cliente
+class Multinacional extends Cliente implements Liquidable, Imprimible
 {
   private $cuit;
   private $razonSocial;
@@ -77,6 +78,19 @@ class Multinacional extends Cliente
       }elseif (Black) {
         // code...
       }
+    }
+
+
+    public function liquidarHaberes(Persona $persona, $sueldo){
+        $persona->getCuenta()->acreditar($sueldo);
+        $var = $this->getCuenta()->getBalance();
+        $var -= $sueldo+500;
+        $this->getCuenta()->setBalance($var);
+        return $persona->getCuenta()->getBalance();
+    }
+    public function mostrar()
+    {
+      return $this->getRazonSocial();
     }
 
 }

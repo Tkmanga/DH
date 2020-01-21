@@ -5,7 +5,7 @@ include_once("tools.php");
 /**
  *
  */
-class Black extends Cuenta
+class Black extends Cuenta implements Imprimible
 {
 
   function __construct($cbu,$balance,$ultimoMovimiento)
@@ -34,6 +34,11 @@ public function saldoEnviar($valor, $origen ){
   }else{
     parent::acreditar($valor,$origen);
   }
+  }
+
+  public function mostrar()
+  {
+    return $this->getBalance();
   }
 }
  ?>

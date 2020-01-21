@@ -3,7 +3,7 @@
 /**
  *
  */
-class Classic extends Cuenta
+class Classic extends Cuenta implements Imprimible
 {
 
   function __construct($cbu,$balance,$ultimoMovimiento)
@@ -41,6 +41,10 @@ class Classic extends Cuenta
     $saldoEnviar = 0;
     $saldoEnviar = $valor - ($valor*0.05);
     parent::acreditar($saldoEnviar,$origen);
+  }
+  public function mostrar()
+  {
+    return $this->getBalance();
   }
 
 }

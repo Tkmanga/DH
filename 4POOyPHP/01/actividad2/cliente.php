@@ -1,7 +1,7 @@
 <?php
 
 include_once("cuenta.php");
-
+include_once("imprimible.php");
 abstract class Cliente{
   Protected $nombre;
   Protected $apellido;

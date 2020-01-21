@@ -3,7 +3,7 @@ include_once("cliente.php");
 /**
  *
  */
-class Persona extends Cliente
+class Persona extends Cliente implements Imprimible
 {
 
   function __construct($nombre, $apellido, $documento, $nacimiento, $email, $pass,Cuenta $cuentaU)
@@ -42,11 +42,39 @@ class Persona extends Cliente
       $this->getCuenta()->setBalance($balance);
       return $var;
     }elseif ($obj instanceOf Black) {
-      $balance = $obj->getUltimoMovimiento();
-      $date = '2016/09/26';
-      $weekday = date('|',strtotime($date));
-      return $weekday;
+      $balance = $obj->getBalance();
+      $numDeSemana = $this->saber_numero_dia($this->getFechaUltimoMov());
+      $var = 500+($numDeSemana*100);
+      $balance -= $var;
+      $this->getCuenta()->setBalance($balance);
+      return $balance;
     }
+  }
+
+  public function getFechaUltimoMov()
+  {
+    $var = $this->getCuenta()->getUltimoMovimiento()[0];
+    $dia = $var['yday'];
+    $año = $var['year'];
+    $mes = $var['mon'];
+    $fecha = $año."/".$mes."/".$dia;
+    return $fecha;
+  }
+
+  public function saber_numero_dia($nombredia) {
+    $semana = ["","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+    $var = date('l', strtotime($nombredia));
+    for ($i=1; $i <=  count($semana) ; $i++) {
+      if($semana[$i]==$var){
+        return $i;
+      }
+    }
+
+}
+
+  public function mostrar()
+  {
+    return $this->getNombre()." ".$this->getApellido();
   }
 }
 

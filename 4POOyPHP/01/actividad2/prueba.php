@@ -57,13 +57,13 @@
 
   $clienteGold = new Persona("pepe","asdasd",897564525,"01/01/2019","pepe@polia@hotmail.com","ahr123",$cuenta9);
   $clientePlatinium = new Persona("pepe","polia",897564525,"01/01/2018","pepe@polia@hotmail.com","ahr123",$cuenta12);
-  $clienteBlack =  new Persona("pepe","asd",897564525,"01/01/2017","pepe@polia@hotmail.com","ahr123",$cuenta2);
+  $clienteBlack =  new Persona("pepe","asd",897564525,"02/01/2017","pepe@polia@hotmail.com","ahr123",$cuenta2);
   //pre($cliente1);
 
   $cliente2 = new PYME("20-12465874-8","monotributo","patagones 2972","01/01/2019","LALA LAND","asd123","lalaland@la.la",$cuenta5);
   //pre($cliente2);
 
-  $cliente3 = new Multinacional("YOUL","06/05/04","youl@hotmail.com","lalala2","98-788564125-4","internacional","calle falsa 123", $cuenta8 );
+  $cliente3 = new Multinacional("20-12465874-8","Multinacional","patagones 2972","01/01/2019","LALA LAND","asd123","lalaland@la.la",$cuenta5);
   //pre($cliente3);
 
   //pre($cliente2->cobrarServicios());
@@ -77,7 +77,35 @@
   //pre($clientePlatinium->cobrarServicios());
   //pre($clientePlatinium->getCuenta()->getBalance());
 
-  pre($clienteBlack->cobrarServicios());
+
+  //pre($clienteBlack->cobrarServicios());
+
+  //echo($cliente2->liquidarHaberes($clientePlatinium,1000));
+  echo("<br>");
+  //echo($cliente2->getCuenta()->getBalance());
+// ejecutamos la función pasándole la fecha que queremos
+  //echo($cliente);
+
+  echo($cuenta1->mostrar());
+  echo("A<br>");
+  echo($cuenta5->mostrar());
+  echo("<br>");
+  echo($cuenta8->mostrar());
+  echo("<br>");
+  echo($cuenta11->mostrar());
+  echo("<br>");
+  echo($clienteClassic->mostrar());
+  echo("<br>");
+  echo($clienteGold->mostrar());
+  echo("<br>");
+  echo($clientePlatinium->mostrar());
+  echo("<br>");
+  echo($clienteBlack->mostrar());
+  echo("<br>");
+  echo($cliente2->mostrar());
+  echo("<br>");
+  echo($cliente3->mostrar());
+  echo("<br>");
    ?>
 <html lang="en" dir="ltr">
   <head>

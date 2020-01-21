@@ -1,14 +1,11 @@
 <?php
-
+include_once("Persona.php");
 /**
  *
  */
 interface Liquidable
 {
-  public function FunctionName($value='')
-  {
-    // code...
-  }
+  public function liquidarHaberes(Persona $var,$var2);
 }
 
  ?>

@@ -1,9 +1,10 @@
 <?php
 include_once("cliente.php");
+include_once("liquidable.php");
 /**
  *
  */
-class PYME extends Cliente
+class PYME extends Cliente implements Liquidable, Imprimible
 {
   private $cuit;
   private $razonSocial;
@@ -110,6 +111,19 @@ class PYME extends Cliente
         // code...
       }
     }
+
+    public function liquidarHaberes(Persona $persona, $sueldo){
+        $persona->getCuenta()->acreditar($sueldo);
+        $var = $this->getCuenta()->getBalance();
+        $var -= $sueldo+($sueldo*0.01);
+        $this->getCuenta()->setBalance($var);
+        return $persona->getCuenta()->getBalance();
+    }
+
+      public function mostrar()
+      {
+        return $this->getRazonSocial();
+      }
 
 }
 
