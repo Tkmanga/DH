@@ -1,6 +1,7 @@
 <?php
 
 include_once("cuenta.php");
+include_once("tools.php");
 /**
  *
  */
@@ -31,11 +32,8 @@ public function saldoEnviar($valor, $origen ){
      $saldoEnviar = $valor-($valor*0.04);
      parent::acreditar($saldoEnviar,$origen);
   }else{
-      parent::acreditar($saldoEnviar,$origen);
+    parent::acreditar($valor,$origen);
   }
-
   }
-
 }
-
  ?>

@@ -53,19 +53,24 @@ abstract class Cuenta
 
     public function setUltimoMovimiento($ultimoMovimiento)
     {
-
-        $this->ultimoMovimiento = $ultimoMovimiento;
-
-        return $this;
+      $this->ultimoMovimiento = $ultimoMovimiento;
+      return $this;
     }
 
     abstract public function debitar($valor,$origen);
 
     public function acreditar($valor,$origen)
     {
-      $this->balance += $valor;
+      $balanceAnterior = $this->getBalance();
+      $balanceNuevo = $balanceAnterior+$valor;
       $var = recorder($origen);
       $this->setUltimoMovimiento($var);
+      $this->setBalance($balanceNuevo);
+    }
+    public function probando($origen)
+    {
+      $var = recorder($origen);
+      return $var;
     }
 
     public function traerDatos()

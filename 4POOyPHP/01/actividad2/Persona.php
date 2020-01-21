@@ -19,21 +19,33 @@ class Persona extends Cliente
 
   public function cobrarServicios()
   {
-
-    $var = $this->getCuenta();
-    if ($var instanceOf Classic) {
-      $var = $this->getCuenta()->getBalance();
+    $acumulador=0;
+    $obj = $this->getCuenta();
+    if ($obj instanceOf Classic) {
+      $var = $obj->getBalance();
       $var -=100;
       $this->getCuenta()->setBalance($var);
-    }elseif (Gold) {
-      $var = $this->getCuenta()->getBalance();
+      return $var;
+    }elseif ($obj instanceOf Gold) {
+      $var = $obj->getBalance();
       $apellido = strlen(self::getApellido());
-      $var -=100;
+      for ($i=0; $i < $apellido ; $i++) {
+        $acumulador = $acumulador+10;
+      }
+      $var -= $acumulador;
       $this->getCuenta()->setBalance($var);
-    }elseif (Platinum) {
-      // code...
-    }elseif (Black) {
-      // code...
+      return $var;
+    }elseif ($obj instanceOf Platinum) {
+      $balance = $obj->getBalance();
+      $var = $balance*0.10;
+      $balance -= $var;
+      $this->getCuenta()->setBalance($balance);
+      return $var;
+    }elseif ($obj instanceOf Black) {
+      $balance = $obj->getUltimoMovimiento();
+      $date = '2016/09/26';
+      $weekday = date('|',strtotime($date));
+      return $weekday;
     }
   }
 }

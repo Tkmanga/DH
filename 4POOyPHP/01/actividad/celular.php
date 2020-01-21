@@ -38,7 +38,6 @@ class Celular
     {
         $this->marca = $marca;
 
-        return $this;
     }
 
     /**
