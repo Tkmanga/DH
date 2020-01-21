@@ -1,20 +1,15 @@
 <?php
 include_once("Suma.php");
+include_once("opf.php");
 /**
  *
  */
 class Multiplicacion extends Suma
 {
 
-  function __construct($val1,$val2)
+  function __construct()
   {
-    parent::setVar1($val1);
-    parent::setVar2($val2);
   }
-
-  $val1 = parent::getVar1();
-  $val2 = parent::getVar2();
-
 
   public function operar($val1,$val2)
   {
