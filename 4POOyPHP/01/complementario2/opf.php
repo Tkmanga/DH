@@ -1,10 +1,7 @@
 <?php
 include_once("Suma.php");
-
 include_once("Resta.php");
-
 include_once("Multiplicacion.php");
-
 include_once("Division.php");
 
 define("SUMA","+");
@@ -33,7 +30,7 @@ class OperacionFactory
     return $obj;
   }
 
-  
+
 }
 
  ?>
