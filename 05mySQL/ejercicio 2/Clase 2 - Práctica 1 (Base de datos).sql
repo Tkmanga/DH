@@ -33,8 +33,8 @@ CREATE TABLE `actor_episode` (
   `actor_id` int(10) unsigned NOT NULL,
   `episode_id` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `actor_episode_actor_id_foreign` (`actor_id`),
-  KEY `actor_episode_episode_id_foreign` (`episode_id`),
+   KEY `actor_episode_actor_id_foreign` (`actor_id`),
+    KEY `actor_episode_episode_id_foreign` (`episode_id`),
   CONSTRAINT `actor_episode_actor_id_foreign` FOREIGN KEY (`actor_id`) REFERENCES `actors` (`id`),
   CONSTRAINT `actor_episode_episode_id_foreign` FOREIGN KEY (`episode_id`) REFERENCES `episodes` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=149 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -357,4 +357,6 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-06-12 10:09:28
+-- Dump compcreted on 2017-06-12 10:09:28
+
+
