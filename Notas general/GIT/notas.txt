@@ -66,3 +66,6 @@ git push origin master (subimos a la rama princial y estable del proyecto )
 
 git status nos indica el estado de la carpeta a sincronizar si esta en rojo los archivos es que no se sincornizo 
 
+git branch (chequeamos los nodos que hay en el arbol de proyecto ) 
+git checkout LALA (cambiamos al nodo que quedramos ) 
+git checkout -b LOLO (creamos un nuevo nodo en el arbol de proyectos y nos posicionamos sobre el) 
