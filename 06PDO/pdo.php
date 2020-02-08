@@ -1,5 +1,5 @@
 <?php
-  $dsn = 'mysql:host:127.0.0.1;dbname=prueba;port=3306';
+  $dsn = 'mysql:localhost:127.0.0.1;dbname=movies_db;port=3306';
   $db_user = 'root';
   $db_pass = '';
   $opt = [PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION];
@@ -9,11 +9,27 @@
     echo $e->getMessage();
   }
   //preparamos
-  $query = $db->prepare('');
+  $query = $db->prepare('SELECT * FROM movies');
   //ejecutamos
   $query->Execute();
   //obtenemos los resultados
   $result = $query->fetchAll(PDO::FETCH_ASSOC);
+
+  /**
+   *
+   */
+  class Conectar 
+  {
+
+    function __construct(argument)
+    {
+      // code...
+    }
+  }
+
+
+  /*
+
 
   //fetch solo nos trae el primer registro q responda a la consulta, si lo ejecutamos
   //varias veces nos trae la 2da 3ra 4ta etc
@@ -27,6 +43,6 @@
 
   $stmt->Execute();
 
-  $results = $stmt->fetchAll(PDO::FETCH_ASSOC); 
-
+  $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+*/
  ?>
