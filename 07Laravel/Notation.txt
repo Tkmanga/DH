@@ -1,10 +1,13 @@
 Laravel implementa ModelViewControler 
-
 3 responsables diferentes y marcadas para cada archivo de tipo MV o C 
-
-
 los pedidos siguen entrando por el archivo de rutas pero hay una nueva capa que se encarga de hacer el nexo con la base de datos y la logica de nuestra app 
-
 cada vez que se escribe una ruta, redirigimos ese pedido a una funcion en el archivo CONTROLER (que se encarga de CRUD con la DB por ejemplo) una vez que termino esto llama  a la VISTA que tiene la unica responsabilidad  de formar el frontend 
-
 Modelo: es el archivo especifico que hace de nuestro modelo de POO cada una de las clases que tengamos en el diagrama UML va ser un modelo laravel, estos se condicen con la tabla de la base de datos, el archivo modelo oficia la responsabilidad de explicarle a laravel como esta formada la base de datos 
+
+
+composer create-project laravel/laravel LALALA "5.8"
+php artisan serv
+php artinsan make:controller LALALA
+php artisan make:model LALALA
+php artisan make:auth 
+

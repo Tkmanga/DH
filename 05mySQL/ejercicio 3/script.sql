@@ -10,11 +10,6 @@ PRIMERA ETAPA
 
 
 En este primera etapa, solicitan:
-
-
- 
-Mostrar los actores (actors) y las películas (movies) en las que participaron. Ordenar por nombre de actor.
-Mostrar: first_name y title.
  
 Mostrar las películas (movies) con sus géneros (genres) si los posee y los géneros con todas las películas que le corresponden, ambas en una sola consulta, sin ordenamiento.
 Mostrar: title y name.
@@ -52,3 +47,23 @@ order by gen.name asc;
 
 /*Mostrar las películas (movies) con sus géneros (genres) y los actores (actors) que participen en cada una de ellas utilizando joins.
 Solicitan que el informe muestre: title, name, first_name y last_name.*/
+
+select mov.title, gen.name, act.first_name, act.last_name
+from movies as mov 
+inner join genres as gen on gen.id = mov.genre_id
+inner join actors as act on act.favorite_movie_id = mov.id;
+
+/*Mostrar los actores (actors) y las películas (movies) en las que participaron. Ordenar por nombre de actor.
+Mostrar: first_name y title.*/
+
+select act.first_name, mov.title 
+from actors as act 
+inner join moives as mov on  mov.id = act.favorite_movie_id;
+
+
+select * from movies_db.users;
+
+alter table users 
+add column surname varchar (255);
+
+select * from users;
