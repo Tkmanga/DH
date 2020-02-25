@@ -65,5 +65,5 @@ select * from movies_db.users;
 
 alter table users 
 add column surname varchar (255);
-
-select * from users;
+use ecommerce;
+select * from productos;

@@ -359,4 +359,4 @@ UNLOCK TABLES;
 
 -- Dump completed on 2017-06-12 10:09:28
 
-create table users;
+create table users 
