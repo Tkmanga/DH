@@ -32,6 +32,42 @@ for (var i = 0; i <= 137; i++) {
 
 //OBJETOS LITERALES
 
+/*
+* Dentro del archivo app.js del punto anterior, crear:
+un objeto literal ironMan con las siguientes propiedades/métodos:
+nombre (String) - "Iron Man"
+equipo (String) - "Avengers"
+poderes (Array) - ["Volar", "Lanzar misiles", "Disparar láser"]
+energía (Number) - 100
+getPoder (Fn) - recibe un parámetro numérico. Retornará el poder seleccionado.
+un objeto literal Hulk con las siguientes propiedades/métodos:
+nombre (String) - "Hulk"
+equipo (String) - "Avengers"
+poderes (Array) - ["Aplastar", "Gritar", "Golpear"]
+energia (Number) - 100
+getPoder (Fn) - recibe un parámetro numérico. Retornará el poder seleccionado.
+* 
+Utilizando las funciones Math.random() y Math.floor(), generar un número entero al azar entre 0 y 2 (en relación a nuestro array de poderes) para luego poder ser utilizado como parámetro de la función getPoder().
+Dicho número deberá ser pasado al método getPoder() y mostrar en consola el poder elegido. Así mismo dependiendo del poder elegido, se deberá descontar de la energía una cantidad así:
+Para ironMan:
+Volar, descontará 10 puntos de energía.
+Lanzar misiles, descontará 15 puntos de energía.
+Disparar láser, descontará 25 puntos de energía.
+Para hulk:
+Aplastar, descontará 5 puntos de energía.
+Gritar, descontará 25 puntos de energía.
+Golpear, descontará 10 puntos de energía.
+Después de descontada la energía de cada superhéroe, mostrar en consola la energía final con la que quedó cada uno.
+Dentro del archivo app.js crear un objeto literal misDatos. Tu información personal deberá ser parte de sus propiedades:
+nombre
+apellido
+dni
+comidaFavorita
+edad
+Deberás recorrer el anterior objeto con un for in y mostrar por consola cada uno de las propiedades junto con sus valores.
+Implementar el método saludar() en el objeto misDatos, que al ser invocado retorne un string así: "Hola mi nombre es NOMBRE APELLIDO y tengo EDAD años". Imprimir su invocación en consola.
+*
+* */
 var ironMan = {
   nombre:"ironMan",
   equipo:"Avengers",
